@@ -23,13 +23,6 @@ public class SpotDaoImpl extends BaseDaoImpl<Spot> implements SpotDao{
 				.findByCriteria(detachedCriteria);
 	}
 
-	@Override
-	public List<Spot> getOrderByOne(DetachedCriteria detachedCriteria,
-			String group) {
-		detachedCriteria.addOrder(Order.desc(group));
-		
-		return (List<Spot>) this.getHibernateTemplate()
-				.findByCriteria(detachedCriteria,0,10);
-	}
+	
 	
 }

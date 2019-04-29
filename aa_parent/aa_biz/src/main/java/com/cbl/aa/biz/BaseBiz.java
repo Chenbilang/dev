@@ -34,4 +34,7 @@ public interface BaseBiz<T> {
 
 	T get(String uuid);
 	List<Object[]> getGroupOne(DetachedCriteria detachedCriteria,String property);	
+	List<T> getByOne(DetachedCriteria detachedCriteria);
+	public List<T> getOrderByOne(DetachedCriteria detachedCriteria,
+			String group);
 }

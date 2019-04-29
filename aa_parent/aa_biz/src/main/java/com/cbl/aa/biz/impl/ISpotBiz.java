@@ -23,10 +23,6 @@ public class ISpotBiz extends IBaseBiz<Spot> implements SpotBiz{
 		return (List<String>) spotDao.getGroupBytime(detachedCriteria, group);
 	}
 
-	@Override
-	public List<Spot> getOrderByOne(DetachedCriteria detachedCriteria,
-			String group) {
-		return spotDao.getOrderByOne(detachedCriteria, group);
-	}
+	
 	
 }

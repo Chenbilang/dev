@@ -16,6 +16,9 @@
     	
         <!-- 景点 -->
 		<action name="spot_*" class="spotAction" method="{1}"></action>
+		<!-- 分析报表 -->
+		<action name="report_*" class="reportAction" method="{1}"></action>
+		<action name="crawl_*" class="crawlAction" method="{1}"></action>
 		<!-- 登陆/退出 -->
 		<action name="login_*" class="loginAction" method="{1}"></action>
 		
