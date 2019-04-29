@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aa_biz/aa_biz.iml" filepath="$PROJECT_DIR$/aa_biz/aa_biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aa_client/aa_client.iml" filepath="$PROJECT_DIR$/aa_client/aa_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aa_dao/aa_dao.iml" filepath="$PROJECT_DIR$/aa_dao/aa_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aa_entity/aa_entity.iml" filepath="$PROJECT_DIR$/aa_entity/aa_entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aa_parent.iml" filepath="$PROJECT_DIR$/aa_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aa_web/aa_web (1).iml" filepath="$PROJECT_DIR$/aa_web/aa_web (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/aa_web/target/m2e-wtp/web-resources/META-INF/maven/com.cbl/aa_web/aa_web (2).iml" filepath="$PROJECT_DIR$/aa_web/target/m2e-wtp/web-resources/META-INF/maven/com.cbl/aa_web/aa_web (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/aa_web/target/m2e-wtp/web-resources/META-INF/maven/com.cbl/aa_web/aa_web (3).iml" filepath="$PROJECT_DIR$/aa_web/target/m2e-wtp/web-resources/META-INF/maven/com.cbl/aa_web/aa_web (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/aa_entity/target/maven-archiver/maven-archiver.iml" filepath="$PROJECT_DIR$/aa_entity/target/maven-archiver/maven-archiver.iml" />
+    </modules>
+  </component>
+</project>
