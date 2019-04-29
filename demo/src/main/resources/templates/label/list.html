@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>标签管理</title>
+<link rel="stylesheet" type="text/css" href="../../static/ui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="../../static/ui/themes/icon.css">
+<script type="text/javascript" src="../../static/ui/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/ui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../../static/ui/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../../static/ui/jquery.serializejson.min.js"></script>
+<script type="text/javascript" src="../../static/ui/date.js"></script>
+<script type="text/javascript" src="../../static/js/mycrud.js"></script>
+<script type="text/javascript">
+	var name="label";
+	var height = 300;
+	var width = 300;
+	var columns=[[
+                {field:'id',title:'编号',width:100},
+	  		    {field:'name',title:'标签名',width:100},
+	  		    {field:'weight',title:'权重',width:100},
+				{field:'-',title:'操作',width:200,formatter: function(value,row,index){
+					var oper = "<a href=\"javascript:void(0)\" onclick=\"edit(" + row.id + ')">修改</a>';
+					oper += ' <a href="javascript:void(0)" onclick="del(' + row.id + ')">删除</a>';
+					return oper;
+				}}
+				]];
+
+</script>
+</head>
+<body>
+<div class="easyui-panel" style="padding-left:4px;border-bottom:0px;">
+	<div style="height:2px;"></div>
+	<form id="searchForm">
+			标签名：<input id="name" name="name" >
+			权重：<input id="weight" name="weight" >
+			
+		<button type="button" id="btnSearch">查询</button>
+	</form>
+	<div style="height:2px;"></div>
+</div>
+<table id="grid"></table>
+
+<div id="editDlg">
+	<form id="editForm">
+			<input name="id" type="hidden"> 
+		<table>
+			<tr>
+				<td>标签名</td><td><input name="name" class="easyui-validatebox" data-options="
+					required:true,missingMessage:'省份不能为空!'
+					">
+				</td>
+			</tr>
+			<tr>
+				<td>权重</td><td><input name="weight" class="easyui-validatebox" data-options="
+					required:true,missingMessage:'景区不能为空!'
+					">
+				</td>
+			</tr>
+
+		</table>
+		<button id="btnSave" type="button">保存</button>
+	</form>
+</div>
+
+</body>
+</html>
