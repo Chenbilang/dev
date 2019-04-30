@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="aa_biz" />
-        <module name="aa_client" />
         <module name="aa_dao" />
         <module name="aa_entity" />
         <module name="aa_web (1)" />

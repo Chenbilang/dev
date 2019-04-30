@@ -11,7 +11,6 @@ import org.apache.struts2.ServletActionContext;
 
 import com.alibaba.fastjson.JSON;
 import com.opensymphony.xwork2.ActionSupport;
-import com.sun.xml.bind.v2.runtime.Name;
 
 public class CrawlAction extends ActionSupport{
 

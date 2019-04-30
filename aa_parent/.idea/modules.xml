@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aa_biz/aa_biz.iml" filepath="$PROJECT_DIR$/aa_biz/aa_biz.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aa_client/aa_client.iml" filepath="$PROJECT_DIR$/aa_client/aa_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/aa_dao/aa_dao.iml" filepath="$PROJECT_DIR$/aa_dao/aa_dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/aa_entity/aa_entity.iml" filepath="$PROJECT_DIR$/aa_entity/aa_entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/aa_parent.iml" filepath="$PROJECT_DIR$/aa_parent.iml" />
