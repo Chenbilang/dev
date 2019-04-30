@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo22.LabelServiceTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.524 s <<< FAILURE! - in com.example.demo22.LabelServiceTest
+TestRedisString(com.example.demo22.LabelServiceTest)  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.example.demo22.LabelServiceTest.TestRedisString(LabelServiceTest.java:75)
+
