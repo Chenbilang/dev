@@ -30,5 +30,11 @@
 	<bean id="spotDao" class="com.cbl.aa.dao.impl.SpotDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	<bean id="yjDao" class="com.cbl.aa.dao.impl.YjDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="qunaeDao" class="com.cbl.aa.dao.impl.QunaeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 </beans>
 	

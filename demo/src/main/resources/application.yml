@@ -1,0 +1,57 @@
+per:
+  name: chenbilang
+  age: 12
+server:
+  port: 8083
+spring:
+  profiles:
+      active: dev
+  thymeleaf:
+    prefix=classpath:/templates/
+    check-template-location=true
+    suffix=.html
+    encoding=UTF-8
+    content-type=text/html
+    mode=HTML5
+    cache=false
+  template:
+        cache: false
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.5.114:3306/lighthouse_ask?characterEncoding=utf8&useUnicode=true&serverTimezone=CTT
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 192.168.5.114
+    port: 6379
+    timeout: 300
+    password:
+  mvc:
+     static-path-pattern: /static/**
+
+
+mybatis:
+  config-location: classpath:SqlMapConfig.xml
+  mapper-locations: classpath:sqlmap/*.xml
+
+com:
+  aliyun:
+    rocketmq:
+      access-key: LTAIxUEy0qQsj26X
+      secret-key: UbxYk4z6TgSQAoROxTX3e42FQvJSdm
+      url: 192.168.5.114:9876
+      type: NAMESRV_ADDR
+      consumer-thread-nums: 50
+#example:
+#   service:
+#       enabled: true
+#       prefix: aa
+#       suffix: bb
+
+
+
+
+
+
+

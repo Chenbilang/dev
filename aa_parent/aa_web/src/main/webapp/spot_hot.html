@@ -16,10 +16,13 @@
 // 显示标题，图例和空的坐标轴
         myChart.setOption({
             title: {
-                text: '旅游景点人气排行'
+                text: '旅游景点人气排行',
+                subtext: '来源：蚂蜂窝（www.mafengwo.cn）',
+    	        x:'center'
             },
             tooltip: {},
             legend: {
+            	 x : 'left',
                 data:['评论数']
             },
             xAxis: {

@@ -1,5 +1,6 @@
 package com.cbl.aa.biz.impl;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.cbl.aa.biz.BaseBiz;
 import com.cbl.aa.dao.BaseDao;
 import com.cbl.aa.dao.EmpDao;
+import com.cbl.aa.entity.Spot;
 
 
 @Transactional
@@ -91,7 +93,19 @@ public class IBaseBiz<T> implements BaseBiz<T> {
 
 	@Override
 	public List<Object[]> getGroupOne(DetachedCriteria detachedCriteria, String property) {
-		// TODO Auto-generated method stub
 		return (List<Object[]>) baseDao.findGroudByOne(detachedCriteria, property);
 		
-	}}
+	}
+
+	@Override
+	public List<T>  getByOne(DetachedCriteria detachedCriteria) {
+		return baseDao.findByOne(detachedCriteria);
+	}
+
+	
+   @Override
+   public List<T> getOrderByOne(DetachedCriteria detachedCriteria,
+		String group) {
+	return baseDao.getOrderByOne(detachedCriteria, group);
+   }
+}

@@ -35,6 +35,14 @@
 		<property name="spotDao" ref="spotDao"></property>
 
 	</bean>
+	<bean id="yjBiz" class="com.cbl.aa.biz.impl.IYjBiz">
+		<property name="yjDao" ref="yjDao"></property>
+
+	</bean>
+	<bean id="qunaeBiz" class="com.cbl.aa.biz.impl.IQunaeBiz">
+		<property name="qunaeDao" ref="qunaeDao"></property>
+
+	</bean>
 	
 </beans>
 	

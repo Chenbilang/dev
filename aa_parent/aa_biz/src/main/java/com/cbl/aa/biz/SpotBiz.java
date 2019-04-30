@@ -19,6 +19,5 @@ import com.cbl.aa.entity.Tree;
 public interface SpotBiz extends BaseBiz<Spot>{
 
 	List<String> getGroupBytime(DetachedCriteria detachedCriteria, String group);
-	List<Spot> getOrderByOne(DetachedCriteria detachedCriteria, String group);
 }
 

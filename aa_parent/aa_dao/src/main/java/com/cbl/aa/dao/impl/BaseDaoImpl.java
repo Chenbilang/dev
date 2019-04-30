@@ -8,11 +8,13 @@ import java.util.Map;
 
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import com.cbl.aa.dao.BaseDao;
+import com.cbl.aa.entity.Spot;
 
 /**
  * 通用的DAO的实现类
@@ -118,5 +120,20 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 		return (List<Object[]>) this.getHibernateTemplate()
 		.findByCriteria(detachedCriteria);
 	}
+
+	@Override
+	public List<T> findByOne(DetachedCriteria detachedCriteria) {
+		return (List<T>) this.getHibernateTemplate().findByCriteria(detachedCriteria);
+	}
+	@Override
+	public List<T> getOrderByOne(DetachedCriteria detachedCriteria,
+			String group) {
+		detachedCriteria.addOrder(Order.desc(group));
+		
+		return (List<T>) this.getHibernateTemplate()
+				.findByCriteria(detachedCriteria,0,10);
+	}
+
+	
 
 }

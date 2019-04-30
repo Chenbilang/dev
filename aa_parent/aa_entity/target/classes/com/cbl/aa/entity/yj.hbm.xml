@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cbl.aa.entity.Yj" table="yj" >
+        <id name="id" >
+            <generator class="native"/>
+        </id>
+        <property name="city_id"/>
+        <property name="city" /> 
+        <property name="spot_yj_12" /> 
+        <property name="spot_yj_34" /> 
+        <property name="spot_yj_56" /> 
+        <property name="spot_yj_78" /> 
+        <property name="spot_yj_910" /> 
+        <property name="spot_yj_112" /> 
+        <property name="spot_yj_hundred" /> 
+        <property name="spot_yj_sthousand" /> 
+        <property name="spot_yj_mthousand" /> 
+        <property name="spot_yj_bthousand" /> 
+        <property name="spot_yj_daytime" /> 
+        <property name="spot_yj_weektime" /> 
+        <property name="spot_yj_twoweektime" /> 
+        <property name="spot_yj_bigtime" /> 
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.cbl.aa.entity.Qunae" table="qunar" >
+        <id name="id" >
+            <generator class="native"/>
+        </id>
+        <property name="city" /> 
+        <property name="spot" /> 
+        <property name="spot_id" /> 
+        <property name="hot" /> 
+        <property name="price" /> 
+        <property name="num" /> 
+        <property name="levels" /> 
+        
+        
+       
+    </class>
+</hibernate-mapping>

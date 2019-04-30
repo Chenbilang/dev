@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="js/echarts.js"></script>
+<script type="text/javascript" src="ui/jquery.min.js"></script>
+<title></title>
+</head>
+<body>
+	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="main" style="width: 1000px; height: 600px;"></div>
+	<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+       
+        
+        var myChart = echarts.init(document.getElementById('main'));
+// 显示标题，图例和空的坐标轴
+        myChart.setOption({
+            title: {
+                text: '旅游景点销售排行',
+                subtext: '来源：去哪儿（www.qunae.com）',
+    	        x:'center'
+            },
+            grid: { // 控制图的大小，调整下面这些值就可以，
+        		x: 100,//控制x轴文字与底部的距离
+                 y2: 200 // y2可以控制倾斜的文字狱最右边的距离，放置倾斜的文字超过显示区域
+        		},
+            xAxis: [{
+        			type: 'category',
+        			//data: ['2015-2016', '2016-2017', '2017-2018', '2018-2019']
+        			axisLabel: {
+        						interval: 0,    //强制文字产生间隔
+        					    rotate: 45,     //文字逆时针旋转45°
+        						textStyle: {    //文字样式
+        						            color: "black",
+        						            fontSize: 16,
+        						            fontFamily: 'Microsoft YaHei'
+        						            }
+        					   },
+        					   data: []
+                      }],
+
+            tooltip: {},
+            legend: {
+            	 x : 'left',
+                data:['销量']
+            },
+            
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: []
+            }]
+        });
+        
+        // 异步加载数据
+        $.get('report_num?group=num').done(function(data) {
+        	
+		    
+			var name = [];
+			var value=[];
+		/* 	for (var i = 0; i < data.length; i++) {
+				
+					value[i] = data[i].value;
+					name[i]=data[i].name;
+				    alert(value[i]);
+				    alert(name[i]);
+				
+			} */
+			$.each($.parseJSON(data),function(i,obj){
+				value[i] = obj.value;
+				name[i]=obj.name;
+			
+			})
+			
+            myChart.setOption({
+                xAxis: {
+                    data: name
+                },
+                series: [{
+                    // 根据名字对应到相应的系列
+                    name: '销量',
+                    data: value
+                }]
+            });
+        });
+ 
+    </script>
+</body>
+</html>
