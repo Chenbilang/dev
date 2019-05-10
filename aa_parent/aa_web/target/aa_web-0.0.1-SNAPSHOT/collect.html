@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>中国旅游景点数据爬取与分析系统</title>
+
+<link rel="stylesheet" type="text/css" href="ui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="ui/themes/icon.css">
+<script type="text/javascript" src="ui/jquery.min.js"></script>
+<script type="text/javascript" src="ui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="ui/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="ui/jquery.serializejson.min.js"></script>
+<script type="text/javascript">
+/**
+ * 登陆
+ */
+ $(function(){
+	
+	$.messager.confirm("确认", "确认开始数据采集？", function(yes) {
+		if (yes) {
+			var crawlName=window.location.search;
+			alert(crawlName);
+			$.ajax({
+				url: 'crawl_start'+crawlName,
+				success:function(rtn){
+					var data= eval('(' + rtn + ')');
+					$.messager.alert('提示',data.message,'info');
+				}
+			});
+		}
+	});
+});
+</script>
+</head>
+<body>
+<div class='signup_container'></div>
+
+</body>
+
+</html>
