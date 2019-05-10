@@ -136,6 +136,6 @@ function edit(uuid) {
 	$('#editForm').form('clear');
 	method = "update";
 	// 加载数据
-	$('#editForm').form('load', name+'_get?id=' + uuid);
+	$('#editForm').form('load', name+"_get?id='" + uuid+"'");
 }
 

@@ -193,8 +193,8 @@ public class BaseAction<T> extends ActionSupport implements ModelDriven<T>{
 	 * 通过编辑查询对象
 	 */
 	public void get() {
-
-		System.out.println("id:"+id);
+		System.out.println("group:"+group);
+		System.out.println("id:"+getId());
 		model = baseBiz.get(id);
 		//转换为json时将date类格式化
 		String jsonString = JSON.toJSONStringWithDateFormat(model,"yyyy-MM-dd");

@@ -25,7 +25,6 @@ import com.cbl.aa.entity.Tree;
 public class SpotAction extends BaseAction<Spot> {
 
 	private SpotBiz spotBiz;
-	
 
 	public void setSpotBiz(SpotBiz spotBiz) {
 		this.spotBiz = spotBiz;
@@ -95,6 +94,49 @@ public class SpotAction extends BaseAction<Spot> {
 		}
 		String responseString = JSON.toJSONString(list2);
 		write(responseString);
+	}
+	/**
+	 * 通过编辑查询对象
+	 */
+	public void get() {
+		model = spotBiz.get(model.getId());
+		//转换为json时将date类格式化
+		String jsonString = JSON.toJSONStringWithDateFormat(model,"yyyy-MM-dd");
+        /*  System.out.println(jsonString);*/
+		Map<String, Object> map = JSON.parseObject(jsonString);
+		//存储key加上前缀后的值
+		Map<String, Object> dataMap = new HashMap<String, Object>();
+		for(String key : map.keySet()){
+			//if里面有对象（对象用map组装）
+			if(map.get(key) instanceof Map){
+				//key值进行拼接
+				//将对象提取出来
+				Map<String,Object> m2 = (Map<String,Object>)map.get(key);
+				for(String key2 : m2.keySet()){
+					dataMap.put(key + "." + key2, m2.get(key2));
+				}
+			}else{
+				dataMap.put(key,map.get(key));
+			}
+		}
+		String jsonStringAfter = JSON.toJSONString(dataMap);
+		/*System.out.println(jsonStringAfter);*/
+		write(jsonStringAfter);
+	}
+	/**
+	 * 删除
+	 * 
+	 * @param jsonString
+	 */
+	public void delete() {
+
+		try {
+			spotBiz.delete(model.getId());
+			ajaxReturn(true, "删除成功");
+		} catch (Exception e) {
+			e.printStackTrace();
+			ajaxReturn(false, "删除失败");
+		}
 	}
 	public DetachedCriteria getDetachedCriteria(Spot spot,DetachedCriteria detachedCriteria){
 		if(spot!=null){

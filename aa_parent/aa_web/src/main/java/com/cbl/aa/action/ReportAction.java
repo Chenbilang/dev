@@ -73,7 +73,7 @@ public class ReportAction extends BaseAction<Yj>{
 		Report s56=new Report("5-6月",yj.getSpot_yj_56());
 		Report s78=new Report("7-8月",yj.getSpot_yj_78());
 		Report s910=new Report("9-10月",yj.getSpot_yj_910());
-		Report s112=new Report("1-12月",yj.getSpot_yj_112());
+		Report s112=new Report("11-12月",yj.getSpot_yj_112());
 		list.add(s12);
 		list.add(s34);
 		list.add(s56);

@@ -1,0 +1,9 @@
+com\redsum\bos\ws\impl\IWaybillWs.class
+com\redsum\bos\ws\ObjectFactory.class
+com\redsum\bos\ws\package-info.class
+com\redsum\bos\ws\AddWaybill.class
+com\redsum\bos\ws\impl\WaybillWsService.class
+com\redsum\bos\ws\WaybilldetailList.class
+com\redsum\bos\ws\AddWaybillResponse.class
+com\redsum\bos\ws\Waybilldetail.class
+com\redsum\bos\ws\WaybilldetailListResponse.class
